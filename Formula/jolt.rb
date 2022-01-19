@@ -12,7 +12,7 @@ class Jolt < Formula
   end
 
   test do
-    (testpath/"transform.json").write <<~EOS
+    (testpath/"shift.json").write <<~EOS
       [
         {
           "operation": "shift",
@@ -23,6 +23,6 @@ class Jolt < Formula
       ]
     EOS
     assert_match "{\"version\":\"1.1.6\"}",
-      shell_output("#{bin}/jolt transform -u transform.json #{test_fixtures("receipt.json")}")
+      shell_output("#{bin}/jolt transform -u shift.json #{test_fixtures("receipt.json")}")
   end
 end
