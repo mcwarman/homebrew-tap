@@ -1,8 +1,8 @@
 class Jolt < Formula
   desc "JSON to JSON transformation library CLI"
   homepage "https://github.com/bazaarvoice/jolt/blob/master/cli/README.md"
-  url "https://github.com/mcwarman/jolt-cli/releases/download/v0.1.1/jolt-cli.tar.gz"
-  sha256 "380281c5ad9bdfc0c4641ee4653ed35c77c88170058b9c8efdd66d7bcc0f321e"
+  url "https://github.com/mcwarman/jolt-cli/releases/download/v0.1.5/jolt-cli.tar.gz"
+  sha256 "d55d34f76c35bec77c6ba8878656f9b1cfbd75193e1d28d1922f8ea12c32828f"
 
   def install
     chmod 0755, "jolt"
