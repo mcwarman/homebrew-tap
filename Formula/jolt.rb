@@ -4,10 +4,11 @@ class Jolt < Formula
   url "https://github.com/mcwarman/jolt-cli/releases/download/v0.1.5/jolt-cli.tar.gz"
   sha256 "d55d34f76c35bec77c6ba8878656f9b1cfbd75193e1d28d1922f8ea12c32828f"
 
+  depends_on "openjdk"
+
   def install
-    chmod 0755, "jolt"
     libexec.install Dir["*"]
-    bin.install_symlink Dir["#{libexec}/jolt"]
+    (bin/"jolt").write_env_script libexec/"jolt", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   test do
