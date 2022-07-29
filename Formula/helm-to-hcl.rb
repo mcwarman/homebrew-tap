@@ -8,6 +8,13 @@ class HelmToHcl < Formula
   version "0.0.2"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/mcwarman/homebrew-tap/releases/download/helm-to-hcl-0.0.2"
+    sha256 cellar: :any_skip_relocation, big_sur:      "262bbb397a31fe01bac387358896c383ee232a3a6d94cf01820009b4070fae0e"
+    sha256 cellar: :any_skip_relocation, catalina:     "b19df8a7d30d093d7897357dcecdb62c78f1dba906f75de7a79f281d9ed543e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9f938e81cd5f84ae6ee7e1a471b251ecff2cce7a7d6eb3345f0c19d11e3ffe73"
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.2/helm-to-hcl_0.0.2_Darwin_arm64.tar.gz"
