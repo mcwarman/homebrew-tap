@@ -5,28 +5,21 @@
 class HelmToHcl < Formula
   desc "Utility for converting helm configuration to HCL for use in Terraform"
   homepage "https://github.com/mcwarman/helm-to-hcl/blob/main/README.md"
-  version "0.0.2"
+  version "0.0.4"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/mcwarman/homebrew-tap/releases/download/helm-to-hcl-0.0.2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "262bbb397a31fe01bac387358896c383ee232a3a6d94cf01820009b4070fae0e"
-    sha256 cellar: :any_skip_relocation, catalina:     "b19df8a7d30d093d7897357dcecdb62c78f1dba906f75de7a79f281d9ed543e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9f938e81cd5f84ae6ee7e1a471b251ecff2cce7a7d6eb3345f0c19d11e3ffe73"
-  end
-
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.2/helm-to-hcl_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "71a40eab89c60f6a9072ef70f1d220efb2d433b1e3b5f0abce2dff9cbb8a17a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.4/helm-to-hcl_0.0.4_Darwin_x86_64.tar.gz"
+      sha256 "daff5ecc39ab475ba2f3558ee50c1bfc87d563e31da280fd474b4196e415166d"
 
       def install
         bin.install "helm-to-hcl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.2/helm-to-hcl_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "55cc03aaddf792fc1399793366a5a8965968aa8e9d653cc4928ad47dc2db4ce5"
+    if Hardware::CPU.arm?
+      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.4/helm-to-hcl_0.0.4_Darwin_arm64.tar.gz"
+      sha256 "3e80789cc0499451c7d1143fcb55d7a24190961455bc21fdca11af2c2bafa8fe"
 
       def install
         bin.install "helm-to-hcl"
@@ -36,16 +29,16 @@ class HelmToHcl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.2/helm-to-hcl_0.0.2_Linux_arm64.tar.gz"
-      sha256 "58ccad78db3d0c889dbf2fd44422112b8877d342168f553dec5f80204acc171b"
+      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.4/helm-to-hcl_0.0.4_Linux_arm64.tar.gz"
+      sha256 "54f73ded8b632ab3e3c1d73602fb1cfb224abc077639bdd920d9144bce732563"
 
       def install
         bin.install "helm-to-hcl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.2/helm-to-hcl_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "b34b10bfc042ede9415dc70c853f74fdf575296cf1a85eb9a417948f768f6594"
+      url "https://github.com/mcwarman/helm-to-hcl/releases/download/v0.0.4/helm-to-hcl_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "18d8bf3a2495e799965a775ad6d9d484225890bd17a4317ea65045e7729de74e"
 
       def install
         bin.install "helm-to-hcl"
