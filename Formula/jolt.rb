@@ -5,9 +5,9 @@ class Jolt < Formula
   sha256 "b5ad1a925216bc35991b2b2e008b25fb196dd7ce583ac16731736127dd0e5374"
 
   bottle do
-    root_url "https://github.com/mcwarman/homebrew-tap/releases/download/jolt-0.1.7"
-    sha256 cellar: :any_skip_relocation, monterey:     "f8f5572d6cccf20e6205e2468c31356bd3464a8d2f165db5b9cb081acb9fbe61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "629a71ba4548c9d9c18ef5368a252bfee68d96ec42f074bdcb6e20f68a856546"
+    root_url "https://github.com/mcwarman/homebrew-tap/releases/download/jolt-0.1.8"
+    sha256 cellar: :any_skip_relocation, monterey:     "cdb17d429d651ac7f31e1084a0597fa2bec857134c986087777a66fb673bf91f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e02636535c6684882b773010df245fd85d32d935ca4d360440be2b94da291631"
   end
 
   depends_on "openjdk"
