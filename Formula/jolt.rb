@@ -1,8 +1,8 @@
 class Jolt < Formula
   desc "JSON to JSON transformation library CLI"
   homepage "https://github.com/bazaarvoice/jolt/blob/master/cli/README.md"
-  url "https://github.com/mcwarman/jolt-cli/releases/download/v0.1.7/jolt-cli.tar.gz"
-  sha256 "fcb691abc406e2c61ddf42f3ff3d9184a1cfeba7517af35057b45f419d40877b"
+  url "https://github.com/mcwarman/jolt-cli/releases/download/v0.1.8/jolt-cli.tar.gz"
+  sha256 "b5ad1a925216bc35991b2b2e008b25fb196dd7ce583ac16731736127dd0e5374"
 
   bottle do
     root_url "https://github.com/mcwarman/homebrew-tap/releases/download/jolt-0.1.7"
